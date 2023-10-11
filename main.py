@@ -40,19 +40,15 @@ time.sleep(0.5)
 #https://miniramp.pl/product-pol-29667-deska-Hockey-Kosovo-White.html
 
 
-#Dropdown menu with sizing (IN PROGRESS UPDATE: shows sizes id)
-# dropdown = driver.find_element_by_id("projector_sizes_cont")
-# dropdown.click()
-# time.sleep(1)
-#
-# select = Select(driver.find_element_by_id('projector_sizes_select'))
-# select.select_by_visible_text("Wybierz rozmiar")
-# options = select.options
-#
-# for option in options:
-#     print(option)
-#
-# driver.quit()
+#Dropdown menu with sizing (IN PROGRESS; UPDATE: shows sizes id)
+dropdown = driver.find_element(By.ID, "projector_sizes_cont")
+dropdown.click()
+time.sleep(1)
+
+size = driver.find_element(By.PARTIAL_LINK_TEXT, "42")
+size.click()
+time.sleep(1)
+
 
 #checkout_process_with_accessibility_check_(in_progress)
 if (driver.find_element(By.ID, "oneclick_googlePay")):
@@ -104,27 +100,19 @@ if (driver.find_element(By.ID, "oneclick_googlePay")):
     submit_form.click()
     time.sleep(1)
 
-    #payment_rules (in progress)
+    #payment_rules
+    cc = driver.find_element(By.ID, "card_payment")
+    cod = driver.find_element(By.ID, "dvp_payment")
 
-    labels = driver.find_element(By.CSS_SELECTOR, "#content > form > div > div:nth-child(1) > section > div.order__payments_section")
-    for label in labels:
-         print(label.text)
+    #payment_choose
+    #cc.click()
+    cod.click()
 
+    #summary_button
 
-    # Lokalizuj wszystkie dostępne metody płatności (NIE DZIALA)
-    #labels = driver.find_elements_by_css_selector("#content > form > div > div:nth-child(1) > section > div.order__payments_section")
-    #time.sleep(4)
-    # Wybierz interesującą Cię metodę płatności, na przykład "BLIK"
-    #desired_payment_method = "PayPo - kup teraz, zapłać za 30 dni"
-
-    #for label in labels:
-    #    if desired_payment_method in label.text:
-
-
-    # Kliknij na element reprezentujący wybraną metodę płatności
-         #label.click()
-
-
+    button_class = "btn --solid --large --icon-right icon-angle-right summary__button"
+    e = driver.find_element_by_css_selector(f'a[class="{button_class}"]')
+    e.click()
 
 
 
