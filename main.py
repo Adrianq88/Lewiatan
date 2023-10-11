@@ -30,13 +30,13 @@ driver.fullscreen_window()
 
 ##PROXY_SETUP_end
 
-
+path = "https://miniramp.pl/product-pol-29735-Buty-Vans-X-Hockey-Skate-Authentic-High.html"
 
 #site_request
-driver.get("https://miniramp.pl/product-pol-29667-deska-Hockey-Kosovo-White.html")
+driver.get(path)
 time.sleep(0.5)
 
-#https://miniramp.pl/product-pol-29735-Buty-Vans-X-Hockey-Skate-Authentic-High.html
+#
 #https://miniramp.pl/product-pol-29667-deska-Hockey-Kosovo-White.html
 
 
@@ -109,18 +109,32 @@ if (driver.find_element(By.ID, "oneclick_googlePay")):
     cod.click()
 
     #summary_button
-
-    button_class = "btn --solid --large --icon-right icon-angle-right summary__button"
-    e = driver.find_element_by_css_selector(f'a[class="{button_class}"]')
+  
+    button_text = "Przejdź dalej"
+    e = driver.find_element(By.PARTIAL_LINK_TEXT, button_text)
     e.click()
 
+        #terms_agreement
+    terms_agree2 = driver.find_element(By.CLASS_NAME, "order2_terms_conditions")
+    terms_agree2.click()
+    time.sleep(1)
+        #terms_agreement
+    terms_cancel = driver.find_element(By.CLASS_NAME, "order2_cancel")
+    terms_cancel.click()
+    time.sleep(1)
+
+    button_text2 = "Zamawiam i płacę"
+    e = driver.find_element(By.PARTIAL_LINK_TEXT, button_text2)
+    e.click()
+
+    time.sleep(60000)
 
 
-elif (driver.find_element(By.LINK_TEXT, "Powiadom mnie o dostępności produktu")):
-    print("Produkt niedostępny")
+# elif (driver.find_element(By.LINK_TEXT, "Powiadom mnie o dostępności produktu")):
+#     print("Produkt niedostępny")
 
-else:
-    driver.quit()
+# else:
+#     driver.quit()
 
 
 
