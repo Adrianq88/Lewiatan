@@ -100,15 +100,15 @@ class LewiatanGUI:
 
     def submit_data(self):
         # Przypisanie wartości do zmiennych
-        first_name = self.firstname_entry.get()
-        last_name = self.lastname_entry.get()
-        birth_date = self.birth_date_entry.get()
-        street_name = self.street_entry.get()
-        street_number_val = self.street_number_entry.get()
-        zipcode_val = self.zipcode_entry.get()
-        city_val = self.city_entry.get()
-        phone_val = self.phone_entry.get()
-        email_val = self.email_entry.get()
+        self.first_name = self.firstname_entry.get()
+        self.last_name = self.lastname_entry.get()
+        self.birth_date = self.birth_date_entry.get()
+        self.street_name = self.street_entry.get()
+        self.street_number_val = self.street_number_entry.get()
+        self.zipcode_val = self.zipcode_entry.get()
+        self.city_val = self.city_entry.get()
+        self.phone_val = self.phone_entry.get()
+        self.email_val = self.email_entry.get()
 
         # Tutaj możesz wykonać operacje na wprowadzonych danych, np. zapis do pliku lub przetwarzanie.
 

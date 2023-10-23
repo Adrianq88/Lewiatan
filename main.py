@@ -11,8 +11,7 @@ import time
 
 #initializing_NO_PROXY_driver
 driver = webdriver.Chrome()
-#fullscreen
-driver.fullscreen_window()
+driver.maximize_window()
 
 ##PROXY SETUP_start
 #proxy_ip_port = 'ip:port'
@@ -45,7 +44,7 @@ dropdown = driver.find_element(By.ID, "projector_sizes_cont")
 dropdown.click()
 time.sleep(1)
 
-size = driver.find_element(By.PARTIAL_LINK_TEXT, "42")
+size = driver.find_element(By.LINK_TEXT, "EU: 42.5")
 size.click()
 time.sleep(1)
 
@@ -88,7 +87,7 @@ if (driver.find_element(By.ID, "oneclick_googlePay")):
     zipcode.send_keys("35-326"), time.sleep(0.2)
     city.send_keys("Rzeszów"), time.sleep(0.2)
     phone.send_keys("734467035"), time.sleep(0.2)
-    email.send_keys("ap9@op.pl"), time.sleep(0.2)
+    email.send_keys("ap98@op.pl"), time.sleep(0.2)
 
     #terms_agreement
     terms_agree = driver.find_element(By.ID, "terms_agree")
@@ -105,8 +104,8 @@ if (driver.find_element(By.ID, "oneclick_googlePay")):
     cod = driver.find_element(By.ID, "dvp_payment")
 
     #payment_choose
-    #cc.click()
-    cod.click()
+    cc.click()
+    #cod.click()
 
     #summary_button
   
