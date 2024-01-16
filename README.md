@@ -7,7 +7,7 @@ The first website I am working on is a *miniramp.pl.* Web driver only for now, r
 
 *miniramp.pl status:*
 
-- Size selector ❌
+- Size selector ✅
 - Adding to cart (working only with one-size products for now) ✅
 - Going to basket (working only with one-size products for now) ✅
 - Checkout process 1 (working only with one-size products for now) ✅
