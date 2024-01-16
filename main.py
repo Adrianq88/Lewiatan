@@ -141,15 +141,3 @@ if (driver.find_element(By.ID, "oneclick_googlePay")):
 
 
 
-
-
-#imię.send_keys("IMIĘ")  #tu wpisz swoję imię
-#nazwisko.send_keys("NAZWISKO") #tu wpisz swoję nazwisko
-#data_urodzenia.send_keys("DATA_URODZENIA")  #tu wpisz swoją datę urodzenia
-#ulica.send_keys("ULICA") #tu wpisz swoją ulicę
-#numer_domu.send_keys("NUMER_DOMU")  #tu wpisz swój nr domu
-#kod_pocztowy.send_keys("KOD_POCZTOWY") #tu wpisz swój kod pocztowy
-#numer_telefonu.send_keys("NUMER_TELEFONU")  #tu wpisz swój numer telefonu
-#adres_e-mail.send_keys("ADRES_EMAIL") #tu wpisz swój adres e-mail
-
-
